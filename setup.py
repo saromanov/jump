@@ -3,15 +3,8 @@
 
 import setuptools
 import textwrap
-from pip.req import parse_requirements
 
 version = "1.0"
-
-
-def get_requirements():
-    install_reqs = parse_requirements('requirements.txt', session='jump')
-    return [str(ir.req) for ir in install_reqs]
-
 
 if __name__ == "__main__":
     setuptools.setup(
@@ -41,6 +34,5 @@ if __name__ == "__main__":
             "Topic :: Software Development",
         ],
         test_suite="jump.tests.AllTests",
-        python_requires=">=3.0",
-        install_requires=get_requirements()
+        python_requires=">=3.0"
     )
