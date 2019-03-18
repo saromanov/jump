@@ -1,0 +1,28 @@
+os: linux
+dist: xenial
+language: python
+python:
+  - "3.7"
+  - "3.6"
+  - "3.5"
+  - "3.4"
+  - "2.7"
+  - nightly
+  - pypy3.5-6.0
+env: TOXENV=py,codecov
+
+before_install:
+  - |
+    if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
+      brew upgrade python
+      export PATH="/usr/local/opt/python/libexec/bin:${PATH}"
+    fi
+
+install:
+  - pip install tox
+
+script:
+  - tox
+
+notifications:
+  email: false
