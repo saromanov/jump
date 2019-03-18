@@ -17,5 +17,11 @@ before_install:
       export PATH="/usr/local/opt/python/libexec/bin:${PATH}"
     fi
 
+install:
+  - pip install pytest
+
+script:
+  - pytest
+
 notifications:
   email: false
