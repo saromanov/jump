@@ -1,5 +1,3 @@
-
-
 def jump(key, buckets):
     """implementation of consistent hashing algorithm
     this algorithm described on this http://arxiv.org/abs/1406.2294
