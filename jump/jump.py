@@ -4,6 +4,8 @@ def jump(key, buckets):
     """
     if buckets <= 0:
         raise Exception("Buckets can'be less than zero")
+    if key <= 0:
+        raise Exception("Key can'e be less than zero")
     result = -1
     i = 0
     while i < buckets:
