@@ -2,6 +2,8 @@ def jump(key, buckets):
     """implementation of consistent hashing algorithm
     this algorithm described on this http://arxiv.org/abs/1406.2294
     """
+    if buckets <= 0:
+        raise Exception("Buckets can'be less than zero")
     result = -1
     i = 0
     while i < buckets:
