@@ -1,5 +1,10 @@
-from ..jump import jump
-import pytest
+from jump.jump import jump
+import unittest
 
-def test_basic():
-    assert jump(856332222999, 8) == 3
+
+class TestBasic(unittest.TestCase):
+    def test_basic(self):
+        assert jump(856332222999, 8) == 3
+
+if __name__ == '__main__':
+    unittest.main()
